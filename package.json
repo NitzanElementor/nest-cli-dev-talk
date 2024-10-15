@@ -66,5 +66,9 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "main": "dist/main.js",
+  "bin": {
+    "my-demo-cli": "dist/main.js"
   }
 }
