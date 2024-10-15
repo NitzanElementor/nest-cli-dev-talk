@@ -3,10 +3,6 @@ import { Command, CommandRunner, Option } from "nest-commander";
 import { KillCommand } from "../subcommands/kill.command";
 import { SelectCommand } from "../subcommands/select.command";
 
-type CommandOptions = {
-    port: string;
-}
-
 @Command({ 
     name: 'lsof',
     subCommands: [KillCommand, SelectCommand]
