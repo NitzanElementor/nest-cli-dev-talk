@@ -15,7 +15,9 @@ export class KillCommand extends CommandRunner {
         inputs.push('-i', `:${options.port}`, '|', 'tail -1')
     }
     const output = spawnSync('lsof', inputs, { shell: '/bin/bash' })
-    const [app, port] = output.stdout.toString().replaceAll(/\s+/g, ' ').split(' ');
+    const [app, pid] = output.stdout.toString().replaceAll(/\s+/g, ' ').split(' ');
+    console.log('app', app)
+    console.log('port', pid)
   }
 
   @Option({
